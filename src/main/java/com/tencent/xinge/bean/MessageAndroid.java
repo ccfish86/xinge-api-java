@@ -3,6 +3,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Map;
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class MessageAndroid {
 
@@ -50,7 +52,7 @@ public class MessageAndroid {
     private ClickAction action;
 
     @JsonProperty(value = "custom_content")
-    private String custom_content;
+    private Map<String,String> custom_content;
 
     public int getN_id() {
         return n_id;
@@ -148,11 +150,11 @@ public class MessageAndroid {
         this.action = action;
     }
 
-    public String getCustom_content() {
+    public Map<String, String> getCustom_content() {
         return custom_content;
     }
 
-    public void setCustom_content(String custom_content) {
+    public void setCustom_content(Map<String,String> custom_content) {
         this.custom_content = custom_content;
     }
 
